@@ -71,7 +71,10 @@ Three::~Three() noexcept
     _size = 0;
 }
 
-void Three::validateTrit(unsigned char digit)
+size_t Three::getSize() const { return _size; }             // const size_t
+unsigned char* Three::getData() const { return _data; }     // const unsigned char*
+
+void Three::validateTrit(const unsigned char digit) const
 {
     if(digit != '0' && digit != '1' && digit != '2')
     {
